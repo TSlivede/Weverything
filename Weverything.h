@@ -1,4 +1,4 @@
-#ifdef __GNUC__
+#if defined(__GNUC__) && !( defined(__ICC) && __ICC < 1600 )/*explicitly exclude older versions of ICC*/
 /* enable all warnings known to men */
  #pragma GCC diagnostic ignored "-Wunknown-pragmas"
  #pragma GCC diagnostic ignored "-Wpragmas"
